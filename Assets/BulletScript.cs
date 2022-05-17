@@ -5,12 +5,10 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     float arrowSpped = 2f;
-    PlayerMovement playerMovement;
     // Start is called before the first frame update
 
     void Start()
     {
-        playerMovement =GameObject.Find("Player").GetComponent<PlayerMovement>();
         // ShootingGame.PlayerMovement.onShootAction += TowardsPosition;
        // this.transform.position = tempPosition;
     }
@@ -28,12 +26,14 @@ public class BulletScript : MonoBehaviour
     {
         if(collision.gameObject.layer==7)
         {
-            playerMovement.UpdateScore(10);
+            ParticleManager.Instance.BlastEffect();
+            PlayerMovement.Instance.UpdateScore(10);
             PoolManager.Instance.Recycle("Enemy", collision.gameObject);
             PoolManager.Instance.Recycle("Bullet", this.gameObject);
         }
         if(collision.gameObject.layer==8)
         {
+            ParticleManager.Instance.ShootEffectFire();
             PoolManager.Instance.Recycle("Fire", collision.gameObject);
             PoolManager.Instance.Recycle("Bullet",this.gameObject);
         }

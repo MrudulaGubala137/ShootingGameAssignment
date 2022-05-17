@@ -36,12 +36,13 @@ public class SpawnManager : MonoBehaviour
         if (time > 5f)
         {
             GameObject tempEnemy = PoolManager.Instance.Spawn("Enemy");
-            tempEnemy.transform.position = new Vector3(8f, Random.Range(-3.2f, 4f), 0f);
+            tempEnemy.transform.position = new Vector3(8f, Random.Range(-3f, 3f), 0f);
             time = 0;
         }
     }
     public void SpawnFire(Vector3 enemyPosition)
     {
+        ParticleManager.Instance.ShootEffect();
         GameObject tempFire = PoolManager.Instance.Spawn("Fire");
         tempFire.transform.position = enemyPosition+new Vector3(-2f,0f,0f);
     }

@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5524946287200452019}
   - component: {fileID: 2048272959335848544}
-  - component: {fileID: 5245429949864619988}
   - component: {fileID: 1472355811997515490}
+  - component: {fileID: 396637245308048774}
   m_Layer: 6
   m_Name: Bullet
   m_TagString: Untagged
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 99a583a3738e3f54ea4a48137b17da15, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -84,18 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5245429949864619988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7136392338851521566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91d12c76dc903bb4e89097eacaaa94b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1472355811997515490
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -122,3 +110,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.674089, y: 0.056806963}
   m_EdgeRadius: 0
+--- !u!114 &396637245308048774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7136392338851521566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91d12c76dc903bb4e89097eacaaa94b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

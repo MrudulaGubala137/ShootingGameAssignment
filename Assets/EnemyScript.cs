@@ -21,7 +21,7 @@ public class EnemyScript : MonoBehaviour
             SpawnManager.Instance.SpawnFire(this.transform.position);
             time = 0;
         }
-        if(transform.position.x < -8f)
+        if(transform.position.x < -8f|| PlayerMovement.Instance.isGameOver == true)
         {
             PoolManager.Instance.Recycle("Enemy", this.gameObject);
         }
@@ -31,6 +31,7 @@ public class EnemyScript : MonoBehaviour
     {
         if (collision.gameObject.layer == 3)
         {
+            PlayerMovement.Instance.LostLife(1);
             PoolManager.Instance.Recycle("Enemy", this.gameObject);
         }
     }
